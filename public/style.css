@@ -83,11 +83,12 @@ html, body{
     cursor: pointer;
 }
 
-.background-content .container .chat-box .chat{
+.background-content .container .chat-box .chat-zone{
     height: 60vh;
+    position: relative;
 }
 
-.background-content .container .chat-box .chat .user-info{
+.background-content .container .chat-box .chat-zone .user-info{
     display: flex;
     align-items: center;
     padding: 10px;
@@ -96,7 +97,7 @@ html, body{
     margin-top: 15px;
 }
 
-.background-content .container .chat-box .chat .user-info button{
+.background-content .container .chat-box .chat-zone .user-info button{
     width: 100%;
     max-width: 100px;
     padding: 5px;
@@ -104,4 +105,38 @@ html, body{
     border: 0;
     background-color: rgb(199, 48, 48);
     color: white;
+}
+
+.background-content .container .chat-box .chat-zone .chat{
+    padding: 10px 5px;
+    max-height: 75%;
+    overflow-y: auto;
+}
+
+.background-content .container .chat-box .chat-zone .chat .user{
+    padding: 15px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.background-content .container .chat-box .chat-zone .chat .user h5{
+    color: red;
+    font-weight: bold;
+}
+
+.background-content .container .chat-box .chat-zone .chat .user h4{
+    font-weight: 300;
+    color: #272424;
+}
+
+.background-content .container .chat-box .chat-zone .message-area{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.background-content .container .chat-box .chat-zone .message-area input{
+    width: 100%;
+    padding: 10px 5px;
+    color: #272424;
+    border: 1px solid #ccc;
 }
