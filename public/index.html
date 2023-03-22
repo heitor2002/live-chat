@@ -13,7 +13,7 @@
         <div class="chat-box">
           <center><h2>Chat Socket.io</h2></center>
           <form action="chat.html">
-            <select name="" id="">
+            <select name="room" id="room">
               <option value="-1">Selecione a sala:</option>
               <option value="csgo">Counter-Strike</option>
               <option value="dota">Dota 2</option>
@@ -24,9 +24,9 @@
             <div class="inputs">
               <div class="username">
                 <label>Nickname:</label>
-                <input type="text" />
+                <input type="text" name="nickname" id="nickname"/>
               </div>
-              <input type="submit" value="Entrar">
+              <input type="submit" value="Entrar" name="submit">
             </div>
           </form>
         </div>
