@@ -31,7 +31,7 @@ socket.on("message", (data) => {
 
   messageDiv.innerHTML += `
               <div class="user" >
-                <h5>${data.nickname}</h5>
+                <h5>${data.nickname} <span>- ${dayjs(data.createdAt).format("HH:mm")}</span></h5>
                 <h4>${data.text}</h4>
               </div>
   `;

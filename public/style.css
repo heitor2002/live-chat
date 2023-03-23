@@ -123,6 +123,10 @@ html, body{
     font-weight: bold;
 }
 
+.background-content .container .chat-box .chat-zone .chat .user h5 span{
+    color: #272424;
+}
+
 .background-content .container .chat-box .chat-zone .chat .user h4{
     font-weight: 300;
     color: #272424;

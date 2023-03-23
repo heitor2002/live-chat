@@ -45,6 +45,6 @@ io.on("connection", (socket) => {
 
     // ENVIAR MENSAGEM
 
-    io.to(data.room).emit("message", message)
+    io.emit("message", message)
   });
 });
