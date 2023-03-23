@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <title>Sala do chat</title>
   </head>
   <body>
@@ -14,17 +14,23 @@
           <center><h2>Dota 2</h2></center>
           <div class="chat-zone">
             <div class="user-info">
-                <span>Bem vindo ao chat usuário!</span>
-                <button>Sair</button>
+              <span>Bem vindo ao chat usuário!</span>
+              <button>Sair</button>
             </div>
-            <div class="chat">
-                <div class="user">
-                    <h5>nickname</h5>
-                    <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h4>
-                </div>
+            <div class="chat" id="chat">
+              <div class="user">
+                <h5>nickname</h5>
+                <h4>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                </h4>
+              </div>
             </div>
             <div class="message-area">
-                <input type="text" placeholder="Digite sua mensagem:" id="message_user">
+              <input
+                type="text"
+                placeholder="Digite sua mensagem:"
+                id="message_user"
+              />
             </div>
           </div>
         </div>
@@ -36,8 +42,8 @@
     <script src="/socket.io/socket.io.js"></script>
     <script src="./chat.js"></script>
     <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.6.1/socket.io.esm.min.js"
-      integrity="sha512-fUxU0lx547CL7r6xWl+q21HHfQzu0yYPvXmtNVlScPhJYWQOn3YIj1J22crPHyTilEtXI50HU/+bHewryqJT1Q=="
+      src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.11.7/dayjs.min.js"
+      integrity="sha512-hcV6DX35BKgiTiWYrJgPbu3FxS6CsCjKgmrsPRpUPkXWbvPiKxvSVSdhWX0yXcPctOI2FJ4WP6N1zH+17B/sAA=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>

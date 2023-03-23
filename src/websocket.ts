@@ -6,7 +6,15 @@ interface RoomUser {
   room: string;
 }
 
+interface Message {
+  room: string;
+  nickname: string;
+  text: string;
+  createAt: Date;
+}
+
 const users: RoomUser[] = [];
+const messages: Message[] = [];
 
 io.on("connection", (socket) => {
   socket.on("room", (data) => {
@@ -21,7 +29,22 @@ io.on("connection", (socket) => {
           nickname: data.username,
           socket_id: socket.id,
         });
+  });
 
-        console.log(users)
+  socket.on("message", (data) => {
+    // SALVAR MENSAGEM
+    const message: Message = {
+      text: data.message,
+      room: data.room,
+      nickname: data.username,
+      createAt: new Date(),
+    };
+
+    messages.push(message);
+    console.log(message)
+
+    // ENVIAR MENSAGEM
+
+    io.to(data.room).emit("message", message)
   });
 });

@@ -19,10 +19,20 @@ document.getElementById("message_user").addEventListener("keypress", (e) => {
       message,
     };
 
-    socket.on("message", data);
+    socket.emit("message", data);
 
     e.target.value = "";
   }
 });
 
-console.log(username, room);
+socket.on("message", (data) => {
+  console.log(data);
+  const messageDiv = document.getElementById("chat");
+
+  messageDiv.innerHTML += `
+              <div class="user" >
+                <h5>${data.nickname}</h5>
+                <h4>${data.text}</h4>
+              </div>
+  `;
+});
